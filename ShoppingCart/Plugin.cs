@@ -12,7 +12,6 @@ using CustomItemBehaviourLibrary.Misc;
 using ShoppingCart.Input;
 using ShoppingCart.Compat;
 using LethalLib.Extras;
-using static BepInEx.BepInDependency;
 namespace ShoppingCart
 {
     [BepInPlugin(Metadata.GUID,Metadata.NAME,Metadata.VERSION)]
