@@ -19,7 +19,6 @@ namespace ShoppingCart.Misc
         [field: SyncedEntryField] public SyncedEntry<bool> DROP_AHEAD_PLAYER { get; set; }
         [field: SyncedEntryField] public SyncedEntry<bool> GRABBED_BEFORE_START { get; set; }
         [field: SyncedEntryField] public SyncedEntry<bool> CONDUCTIVE { get; set; }
-        [field: SyncedEntryField] public SyncedEntry<int> HIGHEST_SALE_PERCENTAGE { get; set; }
         [field: SyncedEntryField] public SyncedEntry<ContainerBehaviour.Restrictions> RESTRICTION_MODE { get; set; }
         [field: SyncedEntryField] public SyncedEntry<int> MAXIMUM_AMOUNT_ITEMS { get; set; }
         [field: SyncedEntryField] public SyncedEntry<float> MAXIMUM_WEIGHT_ALLOWED { get; set; }
@@ -40,7 +39,6 @@ namespace ShoppingCart.Misc
             DROP_AHEAD_PLAYER = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_DROP_AHEAD_PLAYER_KEY, Constants.SHOPPING_CART_DROP_AHEAD_PLAYER_DEFAULT, Constants.SHOPPING_CART_DROP_AHEAD_PLAYER_DESCRIPTION);
             CONDUCTIVE = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_CONDUCTIVE_KEY, Constants.SHOPPING_CART_CONDUCTIVE_DEFAULT, Constants.SHOPPING_CART_CONDUCTIVE_DESCRIPTION);
             GRABBED_BEFORE_START = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_GRABBED_BEFORE_START_KEY, Constants.SHOPPING_CART_GRABBED_BEFORE_START_DEFAULT, Constants.SHOPPING_CART_GRABBED_BEFORE_START_DESCRIPTION);
-            HIGHEST_SALE_PERCENTAGE = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_HIGHEST_SALE_PERCENTAGE_KEY, Constants.SHOPPING_CART_HIGHEST_SALE_PERCENTAGE_DEFAULT, Constants.SHOPPING_CART_HIGHEST_SALE_PERCENTAGE_DESCRIPTION);
             RESTRICTION_MODE = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_RESTRICTION_MODE_KEY, Constants.SHOPPING_CART_RESTRICTION_MODE_DEFAULT, Constants.SHOPPING_CART_RESTRICTION_MODE_DESCRIPTION);
             MAXIMUM_WEIGHT_ALLOWED = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_MAXIMUM_WEIGHT_ALLOWED_KEY, Constants.SHOPPING_CART_MAXIMUM_WEIGHT_ALLOWED_DEFAULT, Constants.SHOPPING_CART_MAXIMUM_WEIGHT_ALLOWED_DESCRIPTION);
             MAXIMUM_AMOUNT_ITEMS = cfg.BindSyncedEntry(topSection, Constants.SHOPPING_CART_MAXIMUM_AMOUNT_ITEMS_KEY, Constants.SHOPPING_CART_MAXIMUM_AMOUNT_ITEMS_DEFAULT, Constants.SHOPPING_CART_MAXIMUM_AMOUNT_ITEMS_DESCRIPTION);

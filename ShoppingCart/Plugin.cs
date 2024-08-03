@@ -59,7 +59,7 @@ namespace ShoppingCart
             wheelsNoise.Add(bundle.TryLoadAudioClipAsset(root + "Shopping_Cart_Move_2.ogg"));
             wheelsNoise.Add(bundle.TryLoadAudioClipAsset(root + "Shopping_Cart_Move_3.ogg"));
             wheelsNoise.Add(bundle.TryLoadAudioClipAsset(root + "Shopping_Cart_Move_4.ogg"));
-            shoppingCartItem.highestSalePercentage = Config.HIGHEST_SALE_PERCENTAGE;
+            shoppingCartItem.highestSalePercentage = 0;
             shoppingCartItem.itemName = ShoppingCartBehaviour.ITEM_NAME;
             shoppingCartItem.itemSpawnsOnGround = true;
             shoppingCartItem.isConductiveMetal = Config.CONDUCTIVE;
