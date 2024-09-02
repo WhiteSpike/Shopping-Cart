@@ -30,8 +30,12 @@ namespace ShoppingCart.Behaviour
             lookSensitivityDrawback = config.LOOK_SENSITIVITY_DRAWBACK.Value;
             playSounds = config.PLAY_NOISE.Value;
             wheelsClip = Plugin.wheelsNoise.ToArray();
-            System.Random random = new System.Random(StartOfRound.Instance.randomMapSeed + 45);
-            SetScrapValue(random.Next(config.MINIMUM_VALUE.Value, config.MAXIMUM_VALUE.Value));
+            if (scrapValue <= 0)
+            {
+                System.Random random = new System.Random(StartOfRound.Instance.randomMapSeed + 45);
+                SetScrapValue(random.Next(config.MINIMUM_VALUE.Value, config.MAXIMUM_VALUE.Value));
+            }
+            if (!KeepScanNode) Destroy(gameObject.GetComponentInChildren<ScanNodeProperties>());
         }
 
         protected override void SetupScanNodeProperties()
