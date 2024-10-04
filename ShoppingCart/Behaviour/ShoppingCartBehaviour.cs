@@ -1,8 +1,8 @@
 ﻿using CustomItemBehaviourLibrary.AbstractItems;
-using UnityEngine;
 using UnityEngine.InputSystem;
 using ShoppingCart.Input;
 using ShoppingCart.Misc;
+using GameNetcodeStuff;
 
 namespace ShoppingCart.Behaviour
 {
@@ -49,6 +49,11 @@ namespace ShoppingCart.Behaviour
         {
             string controlBind = IngameKeybinds.Instance.ShoppingCartKey.GetBindingDisplayString();
             return [$"Drop all items: [{controlBind}]"];
+        }
+        protected override bool ShowDepositPrompts()
+        {
+            PlayerControllerB player = GameNetworkManager.Instance.localPlayerController;
+            return player.isHoldingObject && playerHeldBy != player;
         }
     }
 }
