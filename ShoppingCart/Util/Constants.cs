@@ -73,7 +73,7 @@ namespace ShoppingCart.Util
         internal const bool SHOPPING_CART_PLAY_NOISE_DEFAULT = true;
         internal const string SHOPPING_CART_PLAY_NOISE_DESCRIPTION = "If false, it will just not play the sounds, it will still attract monsters to noise";
 
-        internal const string DROP_ALL_ITEMS_SHOPPING_CART_KEYBIND_NAME = "Drop all items from wheelbarrow";
+        internal const string DROP_ALL_ITEMS_SHOPPING_CART_KEYBIND_NAME = "Drop all items from {ShoppingCartBehaviour.ITEM_NAME}";
         internal const string DROP_ALL_ITEMS_SHOPPING_CART_DEFAULT_KEYBIND = "<Mouse>/middleButton";
 
         internal static readonly string SHOPPING_CART_SCAN_NODE_KEY = string.Format(ITEM_SCAN_NODE_KEY_FORMAT, ShoppingCartBehaviour.ITEM_NAME);
